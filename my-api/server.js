@@ -26,33 +26,37 @@ const schema = gql(`
 var data = {};
 
 data.posts = [
-  { 
-    id: 'xyz-1',
-    content: "First Post - Hello world",
-    userId: 'abc-1',
+  {
+  id: 'xyz-1',
+  content: "First Post - Hello world",
+  userId: 'abc-1',
   },
   {
-    id: 'xyz-2',
-    content: "Second Post - Hello again",
-    userId: 'abc-1',
+  id: 'xyz-2',
+  content: "Second Post - Hello again",
+  userId: 'abc-2',
   },
   {
-    id: 'xyz-3',
-    content: "Random Post",
-    userId: 'abc-2',
+  id: 'xyz-3',
+  content: "Third Post - Hello again",
+  userId: 'abc-3',
   }
-];
+ ];
 
-data.users = [
+ data.users = [
   {
-    id: 'abc-1', 
-    username: "andy25",
+  id: 'abc-1',
+  username: "nurafiqahzuhairie",
   },
   {
-    id: 'abc-2', 
-    username: "randomUser",
+  id: 'abc-2',
+  username: "nydiawesdi",
+  },
+  {
+  id: 'abc-3',
+  username: "norhazmanmusa",
   }
-];
+ ];
 
 const currentUserId = 'abc-1';
 
@@ -98,3 +102,4 @@ const server = new ApolloServer({
 server.listen(4001).then(({ url }) => {
   console.log('API server running at localhost:4001');
 });
+
